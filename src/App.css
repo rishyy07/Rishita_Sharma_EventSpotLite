@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Clean and modern font */
+  background-color: #f9f9f9;
+  /* Light background color for a soft look */
+  color: #333;
+  /* Dark text color for better readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* App Container */
+.App {
+  text-align: center;
+  max-width: 1200px;
+  /* Limit the width for a cleaner layout */
+  margin: 0 auto;
+  /* Center the content */
+  padding: 30px;
+  /* More padding for breathing space */
+  background-color: #ffffff;
+  /* White background for contrast */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+/* Header Styles */
+.App-header {
+  min-height: 100vh;
+  /* Full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* Align to the top */
+  padding: 50px 20px;
+  /* More padding for breathing space */
+}
+
+/* Links */
+.App-link {
+  color: #007bff;
+  /* Classy blue color */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.App-link:hover {
+  text-decoration: underline;
+  /* Underline on hover for clarity */
+}
+
+/* Animation */
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Event Card Styles */
+.event-card {
+  opacity: 0;
+  /* Start hidden */
+  animation: dropIn 0.5s ease forwards;
+  /* Apply animation */
+  transition: opacity 0.5s ease;
+  /* Smooth transition */
+  background: #fff;
+  /* White background for cards */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  overflow: hidden;
+  /* Prevent overflow */
+  margin: 15px;
+  /* Spacing between cards */
+  max-width: 300px;
+  /* Limit card width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effect */
+}
+
+/* Event Card Content */
+.event-card h3 {
+  color: #ff5722;
+  /* Accent color for event title */
+}
+
+.event-card p {
+  color: #555;
+  /* Darker color for date and location */
+}
+
+/* Hover Effects */
+.event-card:hover {
+  transform: scale(1.03);
+  /* Slight scale on hover for interactivity */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Deeper shadow on hover */
+}
+
+/* Button Styles */
+.button {
+  background-color: #eb2f68;
+  /* Button background color */
+  color: #ffffff;
+  /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  /* Smooth transition */
+}
+
+.button:hover {
+  background-color: #e61968;
+  /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .event-card {
+    max-width: 90%;
+    /* Make cards responsive */
+  }
+}
